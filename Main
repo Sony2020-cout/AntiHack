@@ -1,0 +1,45 @@
+#include<iostream>
+#include"conio.h"
+#include "windows.h"
+#include <string>
+
+using namespace std;
+
+void main() 
+{
+	setlocale( 0, "ru");
+	
+	int sThreeNumbers;
+	int tThreeNumbers;
+	int fOurThreeNumbers;
+	cout << "Привет, меня зовут АнтиХак." << endl;
+	cout << "Я твой виртуальный помощник" << endl;
+	cout << "по защите твоих данных." << endl;
+	cout << endl;
+	cout << "Предлагаю, для начала, ввести " << endl;
+	cout << "IP твоего компьютера." << endl;
+	cout << "Для этого нажми клавишу y" << endl;
+	if (_kbhit) {
+		switch (_getch()) {
+		case 'y':
+			int fThreeNumbers;
+			cout << "Введите первые три числа IP" << endl;
+			cin >> fThreeNumbers;
+			cout << "Введите  два-три числа второго ряда IP" << endl;
+			cin >> sThreeNumbers;
+			cout << "Введите  два-три числа третьего ряда IP" << endl;
+			cin >> tThreeNumbers;
+			cout << "Введите  два-три числа четвертого ряда IP" << endl;
+			cin >> fOurThreeNumbers;
+			cout << "Поздравляю, ты вввел свой IP для защиты." << endl;
+			cout << "Твой IP " << endl;
+			cout << fThreeNumbers << " " << sThreeNumbers << " " << tThreeNumbers << " " << fOurThreeNumbers;
+			cout << endl;
+			cout << "Спасибо за доверие" << endl;
+			cout << "Хорошего дня!)" << endl;
+		default:
+			return;
+		}
+	}
+
+}
